@@ -1,0 +1,24 @@
+<div style="text-align: center">
+  <h1>Create</h1>
+  <a routerLink="/">List</a>
+  <br /> <br />
+  
+  <div>
+    <form (submit)="onSubmit()">
+      <label>Note</label> &nbsp;
+      <input type="text" [(ngModel)]="note.text" autofocus name="note"/>
+      <br />
+      <br />
+  
+      <label>Date</label> &nbsp;
+      <input type="date" [(ngModel)]="note.date" name="date" />
+      <br />
+      <br />
+  
+      <button type="submit">Save</button>
+  
+    </form>
+  </div>
+</div>
+
+
