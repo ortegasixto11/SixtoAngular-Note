@@ -2,3 +2,23 @@
 <a routerLink="/create">Crear</a>
 &nbsp; &nbsp;
 <a routerLink="/edit">Editar</a>
+
+
+<br /> <br />
+
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th> Nota </th>
+      <th> Fecha </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let note of notes | async">
+      <td> {{ note.text }} </td>
+      <td> {{ note.date | date: 'dd/MM/yyyy' }} </td>
+    </tr>
+  </tbody>
+
+</table>

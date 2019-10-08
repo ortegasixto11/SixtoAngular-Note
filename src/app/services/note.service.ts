@@ -11,6 +11,10 @@ export class NoteService{
 
   constructor(private http: HttpClient) { }
 
+  listNotes(): Observable<any> {
+    return this.http.get(`${this.baseUrl}`);
+  }
+
   createNote(note: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl}`, note);
   }

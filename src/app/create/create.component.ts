@@ -20,12 +20,11 @@ export class CreateComponent implements OnInit{
 
   onSubmit(){
     this.save()
-    //this.goToList()
   }
 
   save(){
     this.noteService.createNote(this.note)
-      .subscribe(data => console.log(data), err => console.log(err))
+      .subscribe(data => this.goToList(), err => alert(err))
   }
 
   goToList(){
