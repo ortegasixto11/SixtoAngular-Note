@@ -11,6 +11,7 @@
     <tr>
       <th> Nota </th>
       <th> Fecha </th>
+      <th> Actions </th>
     </tr>
   </thead>
 
@@ -18,6 +19,7 @@
     <tr *ngFor="let note of notes | async">
       <td> {{ note.text }} </td>
       <td> {{ note.date | date: 'dd/MM/yyyy' }} </td>
+      <td> <button (click)="noteEdit(note.id)">Edit</button> </td>
     </tr>
   </tbody>
 

@@ -18,7 +18,7 @@ const appRoutes: Routes = [
   // {path:'crear/:id', component: CrearComponent},
   { path: '', component: ListComponent },
   { path: 'create', component: CreateComponent },
-  { path: 'edit', component: EditComponent }
+  { path: 'edit/:id', component: EditComponent }
 ];
 
 

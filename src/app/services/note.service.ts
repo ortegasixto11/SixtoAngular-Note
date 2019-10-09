@@ -19,6 +19,14 @@ export class NoteService{
     return this.http.post(`${this.baseUrl}`, note);
   }
 
+  updateNote(id: string, note: Object): Observable<Object>{
+    return this.http.put(`${this.baseUrl}/${id}`, note);
+  }
+
+  getNote(id: string): Observable<any>{
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+
 
 
 }
