@@ -28,5 +28,13 @@ export class ListComponent implements OnInit{
     this.router.navigate(['edit', id])
   }
 
+  noteDelete(id: string, text: string){
+    if(confirm(`Eliminar ${text}?`)){
+      this.noteService.removeNote(id)
+      .subscribe(data => { 
+        this.loadData() 
+      }, err => alert(err))
+    }
+  }
 
 }

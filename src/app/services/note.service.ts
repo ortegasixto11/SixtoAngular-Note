@@ -27,6 +27,10 @@ export class NoteService{
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
+  removeNote(id: string): Observable<any>{
+    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  }
+
 
 
 }

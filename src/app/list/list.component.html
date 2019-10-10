@@ -1,7 +1,5 @@
 <h1>List</h1>
 <a routerLink="/create">Crear</a>
-&nbsp; &nbsp;
-<a routerLink="/edit">Editar</a>
 
 
 <br /> <br />
@@ -19,7 +17,10 @@
     <tr *ngFor="let note of notes | async">
       <td> {{ note.text }} </td>
       <td> {{ note.date | date: 'dd/MM/yyyy' }} </td>
-      <td> <button (click)="noteEdit(note.id)">Edit</button> </td>
+      <td> 
+        <button (click)="noteEdit(note.id)">Edit</button> &nbsp;
+        <button (click)="noteDelete(note.id, note.text)">Delete</button> 
+      </td>
     </tr>
   </tbody>
 
