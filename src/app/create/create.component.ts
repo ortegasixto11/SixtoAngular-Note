@@ -10,24 +10,24 @@ import { NoteService } from '../services/note.service'
 
 export class CreateComponent implements OnInit{
 
-  note:Note = new Note()
+  note: Note = new Note()
 
-  constructor(private router: Router, private noteService: NoteService){
+  constructor(private router: Router, private noteService: NoteService) {
   }
 
-  ngOnInit(){
+  ngOnInit() {
   }
 
-  onSubmit(){
+  onSubmit() {
     this.save()
   }
 
-  save(){
+  save() {
     this.noteService.createNote(this.note)
       .subscribe(data => this.goToList(), err => alert(err))
   }
 
-  goToList(){
+  goToList() {
     this.router.navigate(['/'])
   }
 
